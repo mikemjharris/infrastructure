@@ -1,0 +1,4 @@
+* * * * * /root/deployment/startup.sh
+@reboot /root/deployment/restart-all-docker-containers.sh
+@reboot /root/deployment/startup.sh
+00 00 * * * docker exec -i view-from-the-ra node scrapper.js 
