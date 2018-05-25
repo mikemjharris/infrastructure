@@ -1,4 +1,5 @@
 #!/bin/bash
+/bin/bash version-blog.sh
 cd /root/blog
 git checkout master
 git pull
