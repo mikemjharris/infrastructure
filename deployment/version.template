@@ -1,0 +1,5 @@
+{
+    "commit": "COMMIT_HASH",
+    "branch": "BRANCH_NAME",
+    "deploy_date": "DEPLOY_DATE"
+}
