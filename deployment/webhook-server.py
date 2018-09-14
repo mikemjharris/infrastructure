@@ -29,11 +29,11 @@ class myHandler(BaseHTTPRequestHandler):
 
 	def do_POST(self):
 		if self.path == '/':
-			os.system("bash /root/deployment/build-blog.sh")
 			self.send_response(200)
 			self.send_header('Content-type','text/html')
 			self.end_headers()
 			self.wfile.write(self.path)
+			os.system("bash /root/deployment/build-blog.sh")
 		elif self.path == '/personal-website':
 			os.system("bash /root/deployment/build-personal-website.sh >> /root/logs/logs.txt")
 			self.send_response(200)
