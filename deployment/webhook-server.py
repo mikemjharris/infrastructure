@@ -46,6 +46,12 @@ class myHandler(BaseHTTPRequestHandler):
 			self.end_headers()
 			self.wfile.write('view from the ra')
 			os.system("bash /root/deployment/build-view-from-the-ra.sh")
+		elif self.path == '/books':
+			self.send_response(200)
+			self.send_header('Content-type','text/html')
+			self.end_headers()
+			self.wfile.write('books')
+			os.system("bash /root/deployment/build-books.sh")
 		return
 
 try:

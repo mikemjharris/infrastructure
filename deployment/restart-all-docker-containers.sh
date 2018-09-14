@@ -20,4 +20,5 @@ docker run -d -p 3001:3000 --name star-wars-twitter mikemjharris/star-wars-twitt
 #docker kill b-reel
 #docker rm b-reel
 #docker run -d -p 7001:8000 --name b-reel mikemjharris/b-reel
-/bin/bash build-view-from-the-ra.sh
+/bin/bash ~/deployment/build-view-from-the-ra.sh
+/bin/bash ~/deployment/build-books.sh
