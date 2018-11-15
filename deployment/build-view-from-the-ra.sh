@@ -1,4 +1,5 @@
 #!/bin/bash
+/bin/bash ~/deployment/version-view-from-the-ra.sh
 cd /root/view-from-the-ra
 git checkout master
 git pull

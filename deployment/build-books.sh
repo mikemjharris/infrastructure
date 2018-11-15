@@ -1,4 +1,5 @@
 #!/bin/bash
+/bin/bash ~/deployment/version-books.sh
 cd /root/books
 git checkout master
 git pull
