@@ -52,6 +52,12 @@ class myHandler(BaseHTTPRequestHandler):
 			self.end_headers()
 			self.wfile.write('books')
 			os.system("bash /root/deployment/build-books.sh")
+		elif self.path == '/insta-preview':
+			self.send_response(200)
+			self.send_header('Content-type','text/html')
+			self.end_headers()
+			self.wfile.write('insta-preview')
+			os.system("bash /root/deployment/build-insta.sh")
 		return
 
 try:
