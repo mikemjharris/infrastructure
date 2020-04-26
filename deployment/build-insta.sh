@@ -6,4 +6,4 @@ git pull
 docker build -t mikemjharris/insta-preview .
 docker kill insta-preview 
 docker rm insta-preview 
-docker run -d -p 7001:8001  --name insta-preview mikemjharris/insta-preview
+docker run -d -v ~/logs/:/var/www/logs -p 7001:8001  --name insta-preview mikemjharris/insta-preview
