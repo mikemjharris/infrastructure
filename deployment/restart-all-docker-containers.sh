@@ -15,8 +15,7 @@ docker rm blog
 #docker run -d -p 7000:8000 --link mongodb:mongodb --name blog mikemjharris/blog
 docker run -d -p 7000:8000  --name blog mikemjharris/blog
 docker kill star-wars-twitter
-docker rm star-wars-twitter
-docker run -d -p 3001:3000 --name star-wars-twitter mikemjharris/star-wars-twitter
+docker run --rm -d -p 3001:3000 --name star-wars-twitter star-wars-new
 #docker kill b-reel
 #docker rm b-reel
 #docker run -d -p 7001:8000 --name b-reel mikemjharris/b-reel
