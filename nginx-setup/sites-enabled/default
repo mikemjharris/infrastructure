@@ -19,7 +19,22 @@
 # Default server configuration
 #
 server {
-	listen 80 default_server;
+    listen 443 ssl;
+    server_name mikemjharris.com;
+    return 301 https://www.mikemjharris.com$request_uri;
+
+    ssl_certificate /etc/letsencrypt/live/mikemjharris.com/fullchain.pem; # managed by Certbot
+    ssl_certificate_key /etc/letsencrypt/live/mikemjharris.com/privkey.pem; # managed by Certbot
+}
+
+server {
+    if ($host = mikemjharris.com) {
+        return 301 https://$host$request_uri;
+    } # managed by Certbot
+
+    server_name mikemjharris.com;
+
+    listen 80 default_server;
 
 	# SSL configuration
 	#
@@ -67,6 +82,8 @@ server {
 	#location ~ /\.ht {
 	#	deny all;
 	#}
+
+
 }
 
 
